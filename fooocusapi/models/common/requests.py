@@ -79,7 +79,7 @@ class AdvancedParams(BaseModel):
     debugging_inpaint_preprocessor: bool = Field(False, description="Debug Inpaint Preprocessing")
     inpaint_disable_initial_latent: bool = Field(False, description="Disable initial latent in inpaint")
     inpaint_engine: str = Field(default_inpaint_engine_version, description="Inpaint Engine")
-    inpaint_strength: float = Field(1.0, description="Inpaint Denoising Strength", ge=0.0, le=1.0)
+    inpaint_strength: float = Field(0.92, description="Inpaint Denoising Strength", ge=0.0, le=1.0)
     inpaint_respective_field: float = Field(1.0, description="Inpaint Respective Field", ge=0.0, le=1.0)
     inpaint_mask_upload_checkbox: bool = Field(False, description="Upload Mask")
     invert_mask_checkbox: bool = Field(False, description="Invert Mask")
