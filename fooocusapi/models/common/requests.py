@@ -125,8 +125,7 @@ def advanced_params_parser(advanced_params: str | None) -> AdvancedParams:
     """
     if advanced_params is not None and len(advanced_params) > 0:
         try:
-            advanced_params_obj = AdvancedParams.__pydantic_validator__.validate_json(advanced_params)
-            return AdvancedParams(**advanced_params_obj)
-        except ValidationError:
-            return AdvancedParams()
+            return AdvancedParams(inpaint_strength = float(advanced_params))
+        except Exception:
+            print("AdvancedParams Exception:", Exception)
     return AdvancedParams()

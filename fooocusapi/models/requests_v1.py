@@ -84,7 +84,7 @@ class ImgUpscaleOrVaryRequest(CommonRequest):
         style_selection_arr = style_selection_parser(style_selections)
         loras_model = lora_parser(loras)
         advanced_params_obj = advanced_params_parser(advanced_params)
-
+        print(advanced_params_obj)
         return cls(
             input_image=input_image, uov_method=uov_method, upscale_value=upscale_value,
             prompt=prompt, negative_prompt=negative_prompt, style_selections=style_selection_arr,
